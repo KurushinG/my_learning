@@ -20,6 +20,8 @@ class Shop:
         return shop
 
     def add(self, *products):
+        file = open(self.__file_name, 'a')
+        file.close()
         for i in products:
             shop = self.get_products()
             if i.name in shop:
